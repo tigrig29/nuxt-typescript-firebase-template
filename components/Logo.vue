@@ -33,8 +33,8 @@ export default class Logo extends Vue {}
 
 <style>
 .NuxtLogo {
-  animation: 1s appear;
   margin: auto;
+  animation: 1s appear;
 }
 
 @keyframes appear {
