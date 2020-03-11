@@ -29,7 +29,7 @@ const config: Configuration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/firebase'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -51,7 +51,21 @@ const config: Configuration = {
   /*
    ** Build configuration
    */
-  build: {}
+  build: {
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            {
+              buildTarget: isServer ? 'sever' : 'client',
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      }
+    }
+  }
 }
 
 export default config
