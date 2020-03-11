@@ -9,7 +9,8 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.vue **/*.css **/*.scss"
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint",
@@ -43,8 +44,16 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
-    "stylelint": "^10.1.0",
+    "sass-loader": "^8.0.2",
+    "stylelint": "13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.14.2",
     "vuex-module-decorators": "^0.16.1"
   }
 }
